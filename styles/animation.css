@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 320px;
+}
+
+.display {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.previous-operand {
+  color: #6c757d;
+  font-size: 1.2rem;
+  min-height: 24px;
+  opacity: 0.7;
+}
+
+.current-operand {
+  color: #212529;
+  font-size: 2.5rem;
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  background: #fff;
+  padding: 16px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: #f1f3f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.operator {
+  background: #e9ecef;
+  color: #495057;
+}
+
+button[data-action="calculate"] {
+  background: #4cc9f0;
+  color: white;
+}
+
+button[data-action="calculate"]:hover {
+  background: #3aa8d0;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.demo-controls {
+  display: flex;
+  gap: 10px;
+}
+
+/* .color button {
+  background: #3aa8d0;
+  color: white;
+} */
+
+.demo-controls button {
+  background: #4361ee;
+  color: white;
+}
+
+.demo-controls button:hover {
+  background: #3a56d4;
+}
+
+/* Animation for Number Input */
+@keyframes numberPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.number-pressed {
+  animation: numberPress 0.15s ease;
+}
+
+/* Animation for Operator Input */
+@keyframes operatorPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.operator-pressed {
+  animation: operatorPress 0.2s ease;
+}
+
+/* Animation for Display Changes */
+@keyframes displayUpdate {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.display-update {
+  animation: displayUpdate 0.3s ease-out;
+}
+
+/* Animation for Highlight */
+@keyframes resultHighlight {
+  0% {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  50% {
+    background-color: #4cc9f0;
+    color: white;
+  }
+  100% {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+}
+
+.result-highlight {
+  animation: resultHighlight 1s ease;
+}
+
+/* Display Properties */
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
