@@ -1,4 +1,4 @@
-# Interactive Animated Calculator
+# Interactive Animated Calculator with DOM Manipulation
 
 This task demonstrates various JavaScript concepts through an Interactive Animated Calculator.
 
@@ -53,10 +53,10 @@ This task demonstrates various JavaScript concepts through an Interactive Animat
 
 ## How to Use
 
-1. Open index.html in a browser
-2. Use the calculator buttons to perform calculations
-3. Check the browser console for JavaScript concept demonstrations
-4. Use the demo buttons to see specific features in action
+1. Open index.html in a browser.
+2. Use the calculator buttons to perform calculations.
+3. Check the browser console for JavaScript concept demonstrations.
+4. Use the demo buttons to see specific features in action.
 
 ## Sample Output in Console:
 
